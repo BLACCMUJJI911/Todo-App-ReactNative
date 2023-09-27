@@ -106,7 +106,7 @@ export default function Body() {
             </View>
             
 <View style={styles.listItem}>
-    <ScrollView>
+    <ScrollView style={{marginVertical:20}}>
 
                 {
 
