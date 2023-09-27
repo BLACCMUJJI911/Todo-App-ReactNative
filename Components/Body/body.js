@@ -91,8 +91,8 @@ export default function Body() {
     return (
         <View style={styles.inpContainer}>
             <View style={styles.inpBtnCont}>
-                <TextInput 
-                    placeholder="Enter Todo Items" 
+                <TextInput
+                    placeholder="Enter Todo Items"
                     style={styles.txtInp}
                     value={item}
                     onChangeText={handleChange}
@@ -104,13 +104,19 @@ export default function Body() {
 
 
             </View>
+            
 <View style={styles.listItem}>
-            {todoList.map((todo, index) => (
 
-                    <Text style={styles.item} key={index}> {index + 1}.  {todo}</Text>
-                    
-                ))}
-                </View>
+                {
+
+                    todoList.map((todo, index) => (
+
+                        <Text style={styles.item} key={index}> {index + 1}.  {todo}</Text>
+
+                    ))
+                }
+
+            </View>
 
         </View>
     )
@@ -124,11 +130,10 @@ const styles = StyleSheet.create({
         height: 100 + "%",
         width: 100 + "%",
         display: "flex",
-        flexDirection:"column",
+        flexDirection: "column",
         alignItems: "center",
         backgroundColor: "#8CC4DF",
         padding: 8,
-        overflow:"scroll"
 
     }),
 
@@ -163,26 +168,25 @@ const styles = StyleSheet.create({
 
     }),
 
-    listItem:({
+    listItem: ({
 
         padding: 10,
-        display:"flex",
-        justifyContent:"flex-start",
-        flexDirection:"column",
+        display: "flex",
+        justifyContent: "flex-start",
+        flexDirection: "column",
         marginTop: 10,
-        gap:5,
-        width:100 +"%",
-        overflow:"scroll"
-        
+        gap: 5,
+        width: 100 + "%"
+
 
     }),
 
-    item:({
+    item: ({
 
-        color:"black",
-        fontSize:30,
+        color: "black",
+        fontSize: 30,
         paddingLeft: 10,
-        
+
 
     })
 
