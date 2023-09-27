@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     txtInp: ({
 
         backgroundColor: "#DFE3EE",
+        color: "black",
         borderRadius: 50,
         padding: 4,
         width: 50 + "%",
