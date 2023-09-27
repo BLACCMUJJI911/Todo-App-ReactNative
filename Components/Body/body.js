@@ -1,76 +1,6 @@
 import { useState } from "react";
 import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-// export default function Body() {
-
-//     let [item, setItem] = useState("")
-//     let [todo, setTodo] = useState([])
-
-
-//     const handleChange = text => {
-//         setItem(text)
-//     }
-
-//     const onAdd = e => {
-
-//         if (item !== "" )
-//         {
-
-//             setTodo([...todo, item])
-//             setItem("")
-
-//         }
-
-
-
-//     }
-
-
-//     return (
-//         <>
-
-
-
-//             <View style={styles.inpContainer}>
-
-//                 <View style={styles.inpBtnCont}>
-
-//                     <TextInput placeholder="Enter Todo Items" value={item} onChange={handleChange} style={styles.txtInp} ></TextInput>
-
-//                     <TouchableOpacity onPress={onAdd}  activeOpacity={0.6} style={styles.add}>
-
-//                         <Text>+</Text>
-
-//                     </TouchableOpacity>
-
-
-
-//                       {
-//                         todo.map((v, i ) => {
-//                             return (
-//                                 <>
-
-//                                 <Text> {v} </Text>
-
-//                                 </>
-//                             )
-//                         })
-//                       }
-
-
-
-
-//                 </View>
-
-//             </View>
-
-
-
-//         </>
-
-//     )
-// }
-
 
 export default function Body() {
 
@@ -104,19 +34,19 @@ export default function Body() {
 
 
             </View>
-            
-<View style={styles.listItem}>
-    <ScrollView style={{marginVertical:20}}>
 
-                {
+            <View style={styles.listItem}>
+                <ScrollView style={{ marginVertical: 20 }}>
 
-                    todoList.map((todo, index) => (
+                    {
 
-                        <Text style={styles.item} key={index}> {index + 1}.  {todo}</Text>
+                        todoList.map((todo, index) => (
 
-                    ))
-                }
-</ScrollView>
+                            <Text style={styles.item} key={index}> {index + 1}.  {todo}</Text>
+
+                        ))
+                    }
+                </ScrollView>
             </View>
 
         </View>
